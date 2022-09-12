@@ -1,18 +1,23 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
+import { BrowserModule } from "@angular/platform-browser";
+import { NgModule } from "@angular/core";
+import { FrisbeeComponent } from "./frisbee.component";
+import { FrisbeeListComponent } from "./frisbee-list.component";
+import { FrisbeeDetailComponent } from "./frisbee-detail.component";
+import { AppComponent } from "./app.component";
+import { FrisbeeService } from "./frisbee.service";
+import { FormsModule } from "@angular/forms";
+import { AppRoutingModule } from "./app-routing.module";
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    FrisbeeComponent,
+    FrisbeeListComponent,
+    FrisbeeDetailComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
-  providers: [],
+
+  imports: [AppRoutingModule, BrowserModule, FormsModule],
+  providers: [FrisbeeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
